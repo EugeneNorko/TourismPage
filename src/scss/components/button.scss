@@ -5,13 +5,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 17px 26px;
-  border: $active-color solid 3px;
+  margin-left: auto;
+  padding: 18px 26px;
+  border: $active-color solid 1px;
   border-radius: 0.25em;
   color: $active-color;
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
+  background-color: $active-color;
+  color: $whiteText;
   overflow: hidden;
   transition: border 300ms, color 300ms;
   user-select: none;
@@ -21,12 +24,12 @@
   z-index: 1;
 }
 
-.button:hover {
-  color: #212121;
-}
+// .button:hover {
+//   color: $whiteText;
+// }
 
 .button:active {
-  border-color: teal;
+  border-color: $secondary-text-color;
 }
 
 .button::after,
@@ -35,8 +38,8 @@
   position: absolute;
   width: 9em;
   aspect-ratio: 1;
-  background: $active-color;
-  opacity: 50%;
+  background: #fe6404;
+  opacity: 75%;
   border-radius: 50%;
   transition: transform 500ms, background 300ms;
 }
@@ -61,5 +64,5 @@
 
 .button:active:before,
 .button:active:after {
-  background: teal;
+  background: $secondary-text-color;
 }
